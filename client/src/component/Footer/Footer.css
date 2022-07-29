@@ -1,0 +1,52 @@
+.bot {
+    background-color: #37475A;
+    margin-top: 2em;
+    /* text-align: end; */
+    text-align: center;
+    height: 25px;
+}
+
+.bot:hover {
+    background-color: #485769;
+    /* text-transform: none; */
+    /* text-decoration: none; */
+}
+
+.bot a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.less {
+    font-size: 1.2em;
+    color: white;
+}
+
+.foot {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.foot:hover {
+    color: #ccc;
+}
+
+.end {
+    text-align: center;
+}
+
+.pop {
+    font-size: 0.8em;
+   
+}
+
+.grey {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    /* text-align:left; */
+}
+
+.white {
+    margin-top: auto;
+}
