@@ -3,6 +3,8 @@ const express = require('express');
 const api = require('./api');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const helmet = require('helmet')
+const compression = require("compression")
 
 // Connecting to database
 const connectToDatabase = () => {
@@ -14,6 +16,8 @@ const connectToDatabase = () => {
 const setMiddleware = (app) => {
   app.use(express.urlencoded({ extended: false }));
   app.use(cors());
+  app.use(compression())
+  app.use(helmet())
   app.use(bodyParser.json());
 };
 
