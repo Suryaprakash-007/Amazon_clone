@@ -10,18 +10,18 @@ const connectMongo = () => {
       
         useNewUrlParser: true,
         useUnifiedTopology: true,
-        server:{
-          socketOptions:{
-            keepAlive:300000,
-            connectTimeoutMS:30000
-          }
-        },
-        replset:{
-          socketOptions:{
-            keepAlive:300000,
-            connectTimeoutMS:30000
-          }
-        }
+        // server:{
+        //   socketOptions:{
+        //     keepAlive:300000,
+        //     connectTimeoutMS:30000
+        //   }
+        // },
+        // replset:{
+        //   socketOptions:{
+        //     keepAlive:300000,
+        //     connectTimeoutMS:30000
+        //   }
+        // }
        
       },
       () => console.log('Mongoose is connected')
