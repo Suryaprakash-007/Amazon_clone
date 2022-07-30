@@ -2,6 +2,7 @@ const Vonage = require('@vonage/server-sdk');
 const hbs = require('nodemailer-express-handlebars');
 const nodemailer = require('nodemailer');
 const path = require('path');
+const logo = require('./image/logo bg w.png')
 
 const sendSMS = (data) => {
   const vonage = new Vonage({
@@ -14,22 +15,22 @@ const sendSMS = (data) => {
   const from = 'Vonage APIs';
   const to = `91${phone}`;
   const text = otp
-    ? `${otp} id your Amazon OTP. Do not share it with anyone.`
+    ? `${otp} id your Earmerce OTP. Do not share it with anyone.`
     : `Dear ${userName}, Your order is successful with order Id.${orderId}. You will receive confirmation message once your order is shipped. Thank you for shopping with us!`;
 
-  // vonage.message.sendSms(from, to, text, (err, responseData) => {
-  //   if (err) {
-  //     console.log(err);
-  //   } else {
-  //     if (responseData.messages[0]['status'] === '0') {
-  //       console.log('Message sent successfully.');
-  //     } else {
-  //       console.log(
-  //         `Message failed with error: ${responseData.messages[0]['error-text']}`
-  //       );
-  //     }
-  //   }
-  // });
+  vonage.message.sendSms(from, to, text, (err, responseData) => {
+    if (err) {
+      console.log(err);
+    } else {
+      if (responseData.messages[0]['status'] === '0') {
+        console.log('Message sent successfully.');
+      } else {
+        console.log(
+          `Message failed with error: ${responseData.messages[0]['error-text']}`
+        );
+      }
+    }
+  });
 };
 
 // Mail sending function on successfull plcaement of the order
@@ -70,6 +71,7 @@ const sendMail = (data) => {
       orderId: orderId,
       orderDate: orderDate,
       total: total,
+      logo:logo,
     },
   };
   //trigger the sending of the E-mail
