@@ -10,7 +10,7 @@
 /coverage
 
 # production
-
+.git
 
 # misc
 .DS_Store

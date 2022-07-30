@@ -9,13 +9,15 @@
   "scripts": {
     "test": "jest",
     "start": "nodemon bin/www.js"
-  },"engines": {
-    "node":"16.14.1"
+  },
+  "engines": {
+    "node": "16.14.1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@heroku/buildpack-registry": "^1.0.1",
     "@vonage/server-sdk": "^2.11.1",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.20.0",
@@ -25,6 +27,7 @@
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "helmet": "^5.1.1",
+    "heroku": "^7.60.2",
     "jsonwebtoken": "^8.5.1",
     "mocha": "^10.0.0",
     "mongoose": "^6.4.2",
