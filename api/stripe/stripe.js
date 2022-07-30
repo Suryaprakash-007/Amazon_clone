@@ -25,7 +25,7 @@ router.post('/stripe_checkout',async(req,res)=>{
             }),
             mode:'payment',
             success_url:'https://earmerce.web.app/checkout1',
-            cancel_url:' https://earmerce.web.app/cart',
+            cancel_url:'https://earmerce.web.app/cart',
         })
         res.json({url: session.url, data:session})
     }
