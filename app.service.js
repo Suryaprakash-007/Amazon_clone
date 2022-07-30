@@ -18,6 +18,7 @@ const setMiddleware = (app) => {
   app.use(cors());
   app.use(compression())
   app.use(helmet())
+  app.use(express.static('image'))
   app.use(bodyParser.json());
 };
 

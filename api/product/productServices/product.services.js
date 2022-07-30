@@ -2,7 +2,7 @@ const Vonage = require('@vonage/server-sdk');
 const hbs = require('nodemailer-express-handlebars');
 const nodemailer = require('nodemailer');
 const path = require('path');
-const logo = require('./image/logo bg w.png')
+
 
 const sendSMS = (data) => {
   const vonage = new Vonage({
@@ -71,7 +71,7 @@ const sendMail = (data) => {
       orderId: orderId,
       orderDate: orderDate,
       total: total,
-      logo:logo,
+      
     },
   };
   //trigger the sending of the E-mail
